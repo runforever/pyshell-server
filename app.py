@@ -13,6 +13,9 @@ from pyshell import (
 )
 
 app = Flask(__name__)
+app.config.from_pyfile('config.cfg', silent=True)
+app.config.from_pyfile('local_config.cfg', silent=True)
+
 CORS(app)
 
 
@@ -36,4 +39,4 @@ def run_pysource():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
