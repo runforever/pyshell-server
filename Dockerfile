@@ -2,7 +2,7 @@ FROM daocloud.io/library/python:2.7.11
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
-ADD requirements.txt /code/
+ADD . /code/
 RUN pip install -r requirements.txt
 
 EXPOSE 5050
